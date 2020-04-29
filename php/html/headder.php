@@ -2,7 +2,7 @@
 require_once 'functions/set_nav.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
