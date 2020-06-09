@@ -1,0 +1,134 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+body {
+  background: #000;
+  font-family: sans-serif;
+}
+
+p {
+  margin: 1rem;
+}
+
+.table {
+  width: 100%;
+}
+.table td {
+  border: 1px solid #ccc;
+}
+.table thead {
+  color: #fff;
+}
+.table thead background {
+  color: #000;
+  repeat: no-repeat;
+}
+@media only screen and (max-width: 1200px) {
+  .table {
+    width: 90%;
+  }
+}
+
+.btn, .btn-danger {
+  border-radius: 3px;
+  padding: 5px 12px;
+}
+
+.btn, .btn-danger {
+  text-decoration: none;
+  background-color: #698fd6;
+  color: #fff;
+}
+.btn:hover, .btn-danger:hover {
+  background: #43629b;
+}
+
+.btn-danger {
+  background: #f06969;
+}
+.btn-danger:hover {
+  background: #b30303;
+}
+
+/*# sourceMappingURL=style.css.map */

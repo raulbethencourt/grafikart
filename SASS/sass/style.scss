@@ -1,0 +1,57 @@
+@import "libs/reset.scss";
+
+$primary: rgb(99, 122, 255);
+
+body {
+    background: #000;
+    font-family: sans-serif;
+}
+
+p {
+    margin: 1rem;
+}
+
+.table {
+    width: 100%;
+
+    td {
+        border: 1px solid #ccc;
+    }
+
+    thead {
+        background {
+            color: #000;
+            repeat: no-repeat;
+        } ;
+        color: #fff;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        width: 90%;
+    }
+}
+
+%btn {
+    border-radius: 3px;
+    padding: 5px 12px;
+}
+
+.btn {
+    @extend %btn;
+    text-decoration: none; 
+    background-color: rgb(105, 143, 214);
+    color: #fff;
+
+    &:hover {
+        background: rgb(67, 98, 155);
+    }
+}
+
+.btn-danger {
+    @extend .btn;
+
+    background: rgb(240, 105, 105);
+    &:hover {
+        background: rgb(179, 3, 3);
+    }
+}
