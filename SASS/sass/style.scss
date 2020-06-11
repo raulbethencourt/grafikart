@@ -1,9 +1,20 @@
 @import "libs/reset.scss";
+@import "libs/mixins.scss";
+@import "libs/functions.scss";
+@import "libs/responsive.scss";
 
-$primary: rgb(99, 122, 255);
+$primary: rgb(114, 151, 221);
+$padding: 20px;
+$base-font-size: 14px;
+
+html,
+body {
+    font-size: $base-font-size;
+}
 
 body {
-    background: #000;
+    padding: $padding;
+    background: #ccc;
     font-family: sans-serif;
 }
 
@@ -22,7 +33,10 @@ p {
         background {
             color: #000;
             repeat: no-repeat;
-        } ;
+
+        }
+
+        ;
         color: #fff;
     }
 
@@ -33,25 +47,104 @@ p {
 
 %btn {
     border-radius: 3px;
-    padding: 5px 12px;
+    padding: em(5) em(12);
 }
 
 .btn {
     @extend %btn;
-    text-decoration: none; 
-    background-color: rgb(105, 143, 214);
-    color: #fff;
+    text-decoration: none;
+    background-color: $primary;
+
+    @if (lightness($primary) > 50%) {
+        color: #000;
+    }
+
+    @else {
+        color: #fff;
+    }
 
     &:hover {
-        background: rgb(67, 98, 155);
+        @if (lightness($primary) < 50%) {
+            background: lighten($primary, 20);
+        }
+
+        @else {
+            background: darken($primary, 20);
+        }
     }
+}
+
+.big {
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 
 .btn-danger {
     @extend .btn;
 
     background: rgb(240, 105, 105);
+
     &:hover {
         background: rgb(179, 3, 3);
+    }
+}
+
+%shadow {
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    @extend %shadow;
+    padding: 10px;
+    border-radius: 3px;
+    position: relative;
+    background: #fff;
+    @include triangle($color: #fff, $size: 20px);
+}
+
+.card-action {
+    @extend .btn;
+}
+
+.card-cancel {
+    @extend .btn-danger;
+}
+
+.card-actions {
+    display: flex;
+}
+
+@for $i from 1 through 4 {
+    .m-#{$i} {
+        margin: 0 ($i * 1rem);
+    }
+}
+
+$categories: chien #606060,
+chat #827300,
+poisson #010189;
+
+@each $category in $categories {
+    .#{nth($category, 1)} {
+        background: #{nth($category, 2)};
+
+        @if (lightness(nth($category, 2)) > 50%) {
+            color: #000;
+        }
+
+        @else {
+            color: #fff;
+        }
+    }
+}
+
+
+@media #{$medium-down} {
+    .card-actions {
+        display: block;
+    }
+
+    .btn {
+        width: 100%;
     }
 }

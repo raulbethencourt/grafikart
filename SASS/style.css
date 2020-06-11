@@ -82,8 +82,14 @@ th:not([align]) {
   text-align: left;
 }
 
+html,
 body {
-  background: #000;
+  font-size: 14px;
+}
+
+body {
+  padding: 20px;
+  background: #ccc;
   font-family: sans-serif;
 }
 
@@ -110,25 +116,97 @@ p {
   }
 }
 
-.btn, .btn-danger {
+.btn, .card-action, .btn-danger, .card-cancel {
   border-radius: 3px;
-  padding: 5px 12px;
+  padding: 0.3571428571em 0.8571428571em;
 }
 
-.btn, .btn-danger {
+.btn, .card-action, .btn-danger, .card-cancel {
   text-decoration: none;
-  background-color: #698fd6;
-  color: #fff;
+  background-color: #7297dd;
+  color: #000;
 }
-.btn:hover, .btn-danger:hover {
-  background: #43629b;
+.btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
+  background: #2d5fbc;
 }
 
-.btn-danger {
+.big {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.btn-danger, .card-cancel {
   background: #f06969;
 }
-.btn-danger:hover {
+.btn-danger:hover, .card-cancel:hover {
   background: #b30303;
+}
+
+.card {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  padding: 10px;
+  border-radius: 3px;
+  position: relative;
+  background: #fff;
+}
+.card::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid #fff;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 20px);
+}
+
+.card-actions {
+  display: flex;
+}
+
+.m-1 {
+  margin: 0 1rem;
+}
+
+.m-2 {
+  margin: 0 2rem;
+}
+
+.m-3 {
+  margin: 0 3rem;
+}
+
+.m-4 {
+  margin: 0 4rem;
+}
+
+.chien {
+  background: #606060;
+  color: #fff;
+}
+
+.chat {
+  background: #827300;
+  color: #fff;
+}
+
+.poisson {
+  background: #010189;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .card-actions {
+    display: block;
+  }
+
+  .btn, .btn-danger, .card-action, .card-cancel {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
