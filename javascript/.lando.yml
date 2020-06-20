@@ -1,0 +1,4 @@
+name: javascript
+recipe: lamp
+config:
+  php: '7.4' 

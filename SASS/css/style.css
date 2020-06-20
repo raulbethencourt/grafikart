@@ -1,0 +1,145 @@
+/* My files */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: left;
+}
+
+html,
+body {
+  font-size: 14px;
+}
+
+.table {
+  width: 100%;
+}
+.table td {
+  border: 1px solid #ccc;
+}
+.table thead {
+  background-color: #000;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+@media only screen and (max-width: 1200px) {
+  .table {
+    width: 90%;
+  }
+}
+
+.btn, .card-action, .btn-danger, .card-cancel {
+  padding: 5px 12px;
+  border-radius: 3px;
+}
+
+.btn, .card-action, .btn-danger, .card-cancel {
+  background: #637aff;
+}
+.btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
+  background: #0025fc;
+}
+
+.btn-danger, .card-cancel {
+  background: #b34d4d;
+}
+.btn-danger:hover, .card-cancel:hover {
+  background: #742121;
+}
+
+@media only screen and (max-width: 1280px) {
+  .btn, .card-action, .btn-danger, .card-cancel {
+    width: 50%;
+  }
+}
+.card {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+  padding: 10px;
+  border-radius: 3px;
+}
+
+.card-actions {
+  display: flex;
+}
+
+/*# sourceMappingURL=style.css.map */

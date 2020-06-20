@@ -1,1 +1,1 @@
-sass bootstrap.scss style.css --watch
+./dart-sass/sass bootstrap.scss ../css/style.css --watch
