@@ -302,3 +302,132 @@ console.log('salut');
     }, 1000);    
     
 })();
+
+let ps = document.querySelectorAll('p');
+
+for (let i = 0; i < ps.length; i++) {
+    (function (p) {
+        window.setInterval(function () {
+            p.classList.toggle('red');
+        }, 1500);
+    })(ps[i])    
+}
+
+
+// para trabajar con los diferentes elementos en html y saber como sleccionarlos
+let ul = document.querySelector('ul');
+console.log(ul.children);
+
+let li = ul.querySelector('li:nth-child(6)');
+console.log(li);
+
+console.log(li.nextElementSibling);
+
+console.log(li.parentElement);
+
+console.log(li.parentElement.children);
+
+li.parentElement.removeChild(li);
+
+document.body.appendChild(li);
+
+
+var li2 = document.createElement('li');
+li2.textContent = 'hola la penyita';
+li.parentElement.appendChild(li2);
+
+li.parentElement.replaceChild(li2, li);
+
+let last = document.querySelector('ul').lastElementChild;
+li.parentElement.insertBefore(last, li2);
+
+
+// Les évènements
+let text = document.querySelectorAll('p');
+let list = document.querySelectorAll('li');
+let btn = document.querySelector('#btn');
+let link = document.querySelector('#external');
+let sbtn = document.querySelector('.spoiler button');
+
+for (let i = 0; i < text.length; i++) {
+    const p = text[i];
+    let red = function () {
+        p.classList.toggle('red');
+    }  
+    btn.addEventListener('click', red);
+}
+
+for (let f = 0; f < list.length; f++) {
+    const li = list[f];
+    li.addEventListener('mouseover', function () { 
+        this.classList.add('blue');
+    });
+
+    li.addEventListener('mouseout', function () {
+        this.classList.remove('blue');
+    });
+}
+
+link.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var reponse = window.confirm('Quiere, realmente salir de esta pagina?');
+    if (reponse === false) {
+        e.preventDefault();
+    }
+});
+
+document.querySelector('#input').addEventListener('keydown', function (e) { 
+    let lettre = String.fromCharCode(e.keyCode);
+    if (lettre != "A") {
+        e.preventDefault();
+    }
+});
+
+let cp = document.querySelector('#cp');
+cp.focus();
+document.querySelector('#form').addEventListener('submit', function (e) {  
+    let cp = document.querySelector('#cp');
+    if (cp.value.length != 5) {
+        alert('Le code postal n\'est pas bon');
+        e.preventDefault();
+    }
+    let mention = document.querySelector('#mention').checked;
+    if (!mention) {
+        alert('debe acceptar las condisiones legales');
+        e.preventDefault();
+    }
+    let age = parseInt(document.querySelector('#age').selectedOptions[0].value, 10);
+    if (age < 18) {
+        alert('Nooooo puedeessss passaarr');
+        e.preventDefault();
+    }
+});
+
+//spoiler
+let elements = document.querySelectorAll('.spoiler');
+
+let createSpoilerButton = function (element) {  
+    //creates span .spoiler__content
+    let span = document.createElement('span');
+    span.className = 'spoiler__content';
+    span.innerHTML = element.innerHTML;
+
+    //creates button
+    let button = document.createElement('button');
+    button.textContent = 'Affiche le spoiler';
+
+    //Add elements to DOM
+    element.innerHTML = '';
+    element.appendChild(button);
+    element.appendChild(span);
+
+    //click evenement 
+    button.addEventListener('click', function () {  
+        span.classList.add('visible');
+        button.remove(button);
+    })
+}
+
+for (let i = 0; i < elements.length; i++) {
+    createSpoilerButton(elements[i]);    
+}

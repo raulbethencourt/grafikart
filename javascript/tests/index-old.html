@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JS</title>
+    <style>
+        .red {
+            color: #c73b3b;
+        }
+
+        .blue {
+            color: #4848b3;
+        }
+
+        .text {
+            transition: color 1s;
+        }
+
+        .spoiler__content {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: opacity 1s;
+        }
+
+        .spoiler__content.visible {
+            display: inline;
+            width: auto;
+            height: auto;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="http://www.google.com" id="external">click me</a>
+    <br>
+    <input type="text" id="input">
+    <div id="test">
+        <p id="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui, sapiente error expedita illum
+            dolore ad
+            reprehenderit cum iusto accusamus asperiores provident molestiae temporibus consequatur ratione explicabo,
+            alias sint hic veritatis.</p>
+    </div>
+    <p id="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla cumque numquam qui totam veniam eius
+        labore quo
+        tempora nesciunt. Voluptatem quis harum odio libero possimus cumque alias. Quasi, aspernatur labore?</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <button id="btn">click me</button>
+    <hr>
+    <form action="#" id="form">
+        <select name="age" id="age">
+            <option value="4">4</option>
+            <option value="18">18</option>
+        </select><br>
+        <input type="text" id="cp"><br>
+        <input type="checkbox" name="mention" id="mention"> Accepto las reglas de la casa.<br>
+        <input type="submit" value="Enviar">
+    </form>
+    <hr>
+    <h2>SPOILER</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus iusto, voluptatem alias impedit adipisci pariatur
+        quae minima porro vero a perspiciatis animi ipsum ut illum molestias iure odio enim aperiam!</p>
+
+    <p class="spoiler">
+        Monsieur X meurt à la fin
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ducimus? Vitae recusandae, dolorum quasi cumque
+        id quas? In amet perspiciatis molestiae debitis esse, pariatur at ex veniam dignissimos itaque numquam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="spoiler"> molestias temporibus sed eligendi saepe minima
+        recusandae maxime?</span> Maxime iste commodi quibusdam error sit tempora laudantium? Earum illum doloremque voluptatum
+        fuga?</p>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
