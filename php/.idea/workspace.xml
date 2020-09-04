@@ -71,6 +71,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c23b420-feef-4cd3-84cb-e2e25fd6166c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/app/.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/app/Autoloader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/pages/home.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/pages/single.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/pages/templates/base.html.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog/public/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
     </list>
@@ -121,7 +129,7 @@
       <updated>1585685841461</updated>
       <workItem from="1585685844178" duration="290000" />
       <workItem from="1585686189280" duration="142000" />
-      <workItem from="1599205163689" duration="4127000" />
+      <workItem from="1599205163689" duration="4501000" />
     </task>
     <servers />
   </component>
@@ -140,6 +148,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="2338" y="202" width="433" height="638" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599209665259">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2338" y="202" width="433" height="638" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599209665259" />
     <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog" timestamp="1599208292775">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
