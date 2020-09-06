@@ -1,5 +1,6 @@
-<h1>Je suis la homepage</h>
-
-<a name="single" id="single" class="btn btn-secondary" href="index.php?p=single" role="button">Single</a>
-
-
+<?php use App\Table\Article; ?>
+<?php foreach ($db->query('SELECT * FROM articles', Article::class) as $post): ?>
+    <?php var_dump($post); ?>
+    <h2><a href="<?php $post->getURL ?>"><?= $post->titre ?></a></h2>
+    <p><?= $post->getExtrait ?></p>
+<?php endforeach; ?>

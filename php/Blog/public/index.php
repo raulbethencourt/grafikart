@@ -1,5 +1,7 @@
 <?php
 
+use App\DataBase;
+
 require '../app/Autoloader.php';
 
 App\Autoloader::register();
@@ -7,13 +9,16 @@ App\Autoloader::register();
 if (isset($_GET['p'])) {
     $p = $_GET['p'];
 } else {
-    $p = 'home';
+    $p = 'portafolio';
 }
 
+//DataBase connection
+$db = new DataBase('blog');
+
 ob_start();
-if ($p === 'home') {
+if ($p === 'portafolio') {
     require '../pages/home.html.php';
-} elseif ($p === 'single'){
+} elseif ($p === 'single') {
     require '../pages/single.html.php';
 }
 $content = ob_get_clean();
