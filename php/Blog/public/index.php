@@ -18,7 +18,7 @@ $db = new DataBase('blog');
 ob_start();
 if ($p === 'portafolio') {
     require '../pages/home.html.php';
-} elseif ($p === 'single') {
+} elseif ($p === 'article') {
     require '../pages/single.html.php';
 }
 $content = ob_get_clean();

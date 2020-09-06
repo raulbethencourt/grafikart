@@ -45,4 +45,24 @@ class DataBase
         $data = $q->fetchAll(PDO::FETCH_CLASS, $class_name);
         return $data;
     }
+
+    /**
+     * @param $statement
+     * @param $attributes
+     * @param $class_name
+     * @return array
+     */
+    public function prepare($statement, $attributes, $class_name, $one =false)
+    {
+        $query = $this->getPDO()->prepare($statement);
+        $query->execute($attributes);
+        $query->setFetchMode(PDO::FETCH_CLASS, $class_name);
+        if ($one)
+        {
+            $data = $query->fetch();
+        } else {
+            $data = $query->fetchAll();
+        }
+        return $data;
+    }
 }

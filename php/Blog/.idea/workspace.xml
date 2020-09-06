@@ -71,8 +71,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46e21b20-7eca-4835-a6f6-f5c0728db60f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/35829376-3490-4669-ada2-e3a3e7aae6fa.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/35829376-3490-4669-ada2-e3a3e7aae6fa/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/DataBase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Table/Article.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/home.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/single.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/single.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/base.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/base.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599392509589</updated>
       <workItem from="1599392510731" duration="9390000" />
+      <workItem from="1599417253554" duration="5940000" />
     </task>
     <servers />
   </component>
@@ -127,20 +142,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2188" y="198" width="734" height="646" key="#Inspections" timestamp="1599395117663">
+    <state x="2188" y="198" width="734" height="646" key="#Inspections" timestamp="1599420751947">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2188" y="198" width="734" height="646" key="#Inspections/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599395117663" />
-    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects" timestamp="1599394848102">
+    <state x="2188" y="198" width="734" height="646" key="#Inspections/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599420751947" />
+    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects" timestamp="1599421720543">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599394848102" />
+    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599421720543" />
     <state x="2154" y="178" width="802" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599394532721">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2154" y="178" width="802" height="686" key="#com.intellij.execution.impl.EditConfigurationsDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599394532721" />
+    <state x="2298" y="356" width="513" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1599423728965">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2298" y="356" width="513" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599423728965" />
     <state x="2367" y="236" width="376" height="571" key="#com.intellij.ide.util.MemberChooser" timestamp="1599397923541">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -149,10 +169,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599396032246" />
-    <state x="2341" y="278" width="426" height="493" key="FileChooserDialogImpl" timestamp="1599397197961">
+    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl" timestamp="1599423724578">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2341" y="278" width="426" height="493" key="FileChooserDialogImpl/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599397197961" />
+    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599423724578" />
     <state x="2275" y="233" width="601" height="584" key="NewPhpClassDialog" timestamp="1599401028854">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -165,9 +185,9 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2328" y="331" width="454" height="377" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599396498352" />
-    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1599392896928">
+    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1599423439812">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599392896928" />
+    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599423439812" />
   </component>
 </project>
