@@ -71,23 +71,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46e21b20-7eca-4835-a6f6-f5c0728db60f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/35829376-3490-4669-ada2-e3a3e7aae6fa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/35829376-3490-4669-ada2-e3a3e7aae6fa/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/DataBase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Table/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/home.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/home.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/single.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/single.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/templates/base.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/base.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +84,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1h8V3nphJ9dkDqVK80MdE0IrDms" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -113,7 +98,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -126,6 +111,8 @@
       <updated>1599392509589</updated>
       <workItem from="1599392510731" duration="9390000" />
       <workItem from="1599417253554" duration="5940000" />
+      <workItem from="1599424650849" duration="19000" />
+      <workItem from="1602680639731" duration="928000" />
     </task>
     <servers />
   </component>
@@ -145,6 +132,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2141" y="178" width="826" height="693" key="#CLI_Interpreters" timestamp="1602682117169">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2141" y="178" width="826" height="693" key="#CLI_Interpreters/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602682117169" />
     <state x="2188" y="198" width="734" height="646" key="#Inspections" timestamp="1599420751947">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -169,18 +160,18 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599396032246" />
-    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl" timestamp="1599423724578">
+    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl" timestamp="1599424667903">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599423724578" />
+    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599424667903" />
     <state x="2275" y="233" width="601" height="584" key="NewPhpClassDialog" timestamp="1599401028854">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2275" y="233" width="601" height="584" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599401028854" />
-    <state x="2055" y="153" width="1009" height="737" key="SettingsEditor" timestamp="1599400426668">
+    <state x="2055" y="153" width="1009" height="737" key="SettingsEditor" timestamp="1602682132491">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2055" y="153" width="1009" height="737" key="SettingsEditor/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599400426668" />
+    <state x="2055" y="153" width="1009" height="737" key="SettingsEditor/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602682132491" />
     <state x="2328" y="331" width="454" height="377" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1599396498352">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
