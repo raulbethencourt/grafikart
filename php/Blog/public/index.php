@@ -12,9 +12,6 @@ if (isset($_GET['p'])) {
     $p = 'portafolio';
 }
 
-//DataBase connection
-$db = new DataBase('blog');
-
 ob_start();
 if ($p === 'portafolio') {
     require '../pages/home.html.php';

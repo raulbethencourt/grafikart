@@ -1,8 +1,13 @@
 <?php
-$post = $db->prepare('SELECT * FROM articles WHERE id = ?',
+
+use App\Table\App;
+
+$post = App::getDb()->prepare(
+    'SELECT * FROM articles WHERE id = ?',
     [$_GET['id']],
     \App\Table\Article::class,
-    true);
+    true
+);
 ?>
 
 <h1><?= $post->titre ?></h1>

@@ -12,7 +12,7 @@ class DataBase
     private $db_host;
     private $pdo;
 
-    public function __construct($db_name, $db_user = 'root', $db_pass = '', $db_host = '127.0.0.1')
+    public function __construct($db_name, $db_user, $db_pass, $db_host)
     {
         $this->db_name = $db_name;
         $this->db_user = $db_user;
