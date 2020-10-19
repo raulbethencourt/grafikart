@@ -1,5 +1,9 @@
 <?php
+
+use App\App;
+
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Test blog for OOP tutorial">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <title>Starter Template · Bootstrap</title>
+    <title><?= App::getTitle() ?></title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"

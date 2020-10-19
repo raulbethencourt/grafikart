@@ -4,16 +4,21 @@ use App\App;
 use App\Table\Article;
 use App\Table\Categorie;
 
-App::setTitle('Home');
+$categorie = Categorie::find($_GET['id']);
+if ($categorie === false) {
+    App::notFound();
+}
+App::setTitle($categorie->title);
+$articles = Article::lastByCategory($_GET['id']);
+$categories = Categorie::all();
 ?>
 
+<h1><?= $categorie->title ?></h1>
 
 <div class="row">
     <div class="col-sm-8">
         <?php
-
-
-        foreach (Article::getLast() as $post): ?>
+        foreach ($articles as $post): ?>
 
             <h2><a href="<?= $post->url ?>"><?= $post->titre ?></a></h2>
 
@@ -30,7 +35,8 @@ App::setTitle('Home');
                 <li><a href="<?= $categorie->url ?>"><?= $categorie->title ?></a></li>
             <?php endforeach ?>
         </ul>
-        
+
     </div>
 </div>
+
 

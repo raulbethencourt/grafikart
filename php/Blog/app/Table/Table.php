@@ -9,26 +9,38 @@ abstract class Table
 {
     protected static $table;
 
-    private static function getTable()
+    public static function find($id)
     {
-        if (static::$table === null) {
-            $class_name = explode('\\', static::class);
-            static::$table = strtolower(end($class_name)).'s';
-        }
-
-        return static::$table;
+        return self::query(
+            sprintf(
+                "
+            SELECT *
+            FROM %s
+            WHERE id = ?",
+                static::$table
+            ),
+            [$id],
+            true
+        );
     }
 
-    public static function all()
+    public static function query($statement, $attributes = null, $one = false)
     {
-        return App::getDb()->query(
+        if ($attributes) {
+            return App::getDb()->prepare($statement, $attributes, static::class, $one);
+        }
+        return App::getDb()->query($statement, static::class, $one);
+    }
+
+    public static function all(): array
+    {
+        return self::query(
             sprintf(
                 "
             SELECT *
             FROM %s",
-                static::getTable()
-            ),
-            static::class
+                static::$table
+            )
         );
     }
 

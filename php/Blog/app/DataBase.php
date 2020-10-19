@@ -31,10 +31,22 @@ class DataBase
         return $this->pdo;
     }
 
-    public function query($statement, $class_name): array
+    /**
+     * @param $statement
+     * @param $class_name
+     * @param  false  $one
+     * @return array|mixed
+     */
+    public function query($statement, $class_name, $one = false)
     {
         $q = $this->getPDO()->query($statement);
-        $data = $q->fetchAll(PDO::FETCH_CLASS, $class_name);
+        $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
+
+        if ($one) {
+            $data = $q->fetch();
+        } else {
+            $data = $q->fetchAll();
+        }
 
         return $data;
     }
@@ -43,19 +55,19 @@ class DataBase
      * @param $statement
      * @param $attributes
      * @param $class_name
-     * @param  bool  $one
-     * @return object
+     * @param  false  $one
+     * @return array|mixed
      */
-    public function prepare($statement, $attributes, $class_name, $one = false): object
+    public function prepare($statement, $attributes, $class_name, $one = false)
     {
-        $query = $this->getPDO()->prepare($statement);
-        $query->execute($attributes);
-        $query->setFetchMode(PDO::FETCH_CLASS, $class_name);
+        $q = $this->getPDO()->prepare($statement);
+        $q->execute($attributes);
+        $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
 
         if ($one) {
-            $data = $query->fetch();
+            $data = $q->fetch();
         } else {
-            $data = $query->fetchAll();
+            $data = $q->fetchAll();
         }
 
         return $data;
