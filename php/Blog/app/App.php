@@ -4,51 +4,14 @@ namespace App;
 
 class App
 {
-    const DB_NAME = 'blog';
-    const DB_USER = 'root';
-    const DB_PASS = '';
-    const DB_HOST = '127.0.0.1';
+    public $title = 'My site';
+    private static $_instance;
 
-    private static $database;
-    private static $title = "My site";
-
-    public static function getDb()
+    public static function getInstance()
     {
-        if (self::$database === null) {
-            self::$database = new DataBase(self::DB_NAME, self::DB_USER, self::DB_PASS,
-                self::DB_HOST);
+        if (is_null(self::$_instance)) {
+            self::$_instance = new App();
         }
-
-        return self::$database;
-    }
-
-    /**
-     * @param  mixed  $database
-     */
-    public static function setDatabase($database): void
-    {
-        self::$database = $database;
-    }
-
-    public static function notFound(): void
-    {
-        header("HTTP/1.0 404 Not Found");
-        header("Location: index.php?p=404");
-    }
-
-    /**
-     * @return mixed
-     */
-    public static function getTitle()
-    {
-        return self::$title;
-    }
-
-    /**
-     * @param  mixed  $title
-     */
-    public static function setTitle($title): void
-    {
-        self::$title = $title;
+        return self::$_instance;
     }
 }
