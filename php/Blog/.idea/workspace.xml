@@ -23,8 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46e21b20-7eca-4835-a6f6-f5c0728db60f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/Article.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/Categorie.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/Table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,12 +56,13 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../MCIR/www/test-sass-bem-grid" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Table" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -81,6 +87,10 @@
       <workItem from="1603135413513" duration="84000" />
       <workItem from="1603135507469" duration="6555000" />
       <workItem from="1603181122373" duration="3716000" />
+      <workItem from="1603200690055" duration="83000" />
+      <workItem from="1603200782885" duration="596000" />
+      <workItem from="1603222773125" duration="617000" />
+      <workItem from="1603262321133" duration="2995000" />
     </task>
     <servers />
   </component>
@@ -128,10 +138,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2298" y="356" width="513" height="330" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599423728965" />
-    <state x="2367" y="236" width="376" height="571" key="#com.intellij.ide.util.MemberChooser" timestamp="1599397923541">
+    <state x="2367" y="236" width="376" height="571" key="#com.intellij.ide.util.MemberChooser" timestamp="1603269994188">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2367" y="236" width="376" height="571" key="#com.intellij.ide.util.MemberChooser/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599397923541" />
+    <state x="2367" y="236" width="376" height="571" key="#com.intellij.ide.util.MemberChooser/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603269994188" />
     <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599396032246">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -140,18 +150,19 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2292" y="275" width="526" height="493" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603056229102" />
-    <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl" timestamp="1603137033610">
-      <screen x="1600" y="0" width="1920" height="1080" />
+    <state x="618" y="335" width="351" height="417" key="FileChooserDialogImpl" timestamp="1603195525037">
+      <screen x="0" y="103" width="1600" height="900" />
     </state>
+    <state x="618" y="335" width="351" height="417" key="FileChooserDialogImpl/1600.0.1920.1080/0.103.1600.900@0.103.1600.900" timestamp="1603195525037" />
     <state x="2341" y="278" width="419" height="500" key="FileChooserDialogImpl/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603137033610" />
     <state width="247" height="458" key="HiddenNamespacesPopup" timestamp="1602703863220">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="458" key="HiddenNamespacesPopup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602703863220" />
-    <state x="2275" y="233" width="601" height="605" key="NewPhpClassDialog" timestamp="1603181343631">
+    <state x="2275" y="233" width="643" height="626" key="NewPhpClassDialog" timestamp="1603269526193">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2275" y="233" width="601" height="605" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603181343631" />
+    <state x="2275" y="233" width="643" height="626" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603269526193" />
     <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog" timestamp="1603135914585">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -172,9 +183,9 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2270" y="287" width="569" height="468" key="refactoring.ChangeSignatureDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603136369140" />
-    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1603140857902">
+    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1603269707914">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603140857902" />
+    <state x="2223" y="228" width="672" height="678" key="search.everywhere.popup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603269707914" />
   </component>
 </project>

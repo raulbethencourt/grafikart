@@ -1,9 +1,10 @@
 <?php
 
-use App\Config;
+use App\App;
+use App\Autoloader as AutoloaderAlias;
 
 require '../app/Autoloader.php';
-App\Autoloader::register();
+AutoloaderAlias::register();
+$app = App::getInstance();
 
-$config = Config::getInstance();
-var_dump($config->get('db_user'));
+var_dump($app->getTable('posts'));
