@@ -4,9 +4,9 @@ namespace App;
 
 class App
 {
-    public string $title = 'My site';
+    public $title = 'My site';
     private $db_instance;
-    private static App $_instance;
+    private static $_instance;
 
     public static function getInstance(): App
     {
@@ -25,7 +25,7 @@ class App
     {
         $class_name = 'App\\Table\\'.ucfirst($name).'Table';
 
-        return new $class_name();
+        return new $class_name($this->getDb());
     }
 
     public function getDb(): DataBase

@@ -9,9 +9,9 @@ namespace App;
 class Autoloader
 {
     /**
-     * autoload() than le fichier index
+     * autoload() than the file index
      */
-    static function register()
+    public static function register()
     {
         spl_autoload_register([__CLASS__, 'autoload']);
     }
@@ -20,7 +20,7 @@ class Autoloader
      * @param [string] $class_name Allows to generates each require of each class
      * @return string
      */
-    static function autoload($class)
+    public static function autoload($class)
     {
         if (strpos($class, __NAMESPACE__ . '\\') === 0) {
             $class = str_replace(array(__NAMESPACE__ . '\\', '\\'), array('', '/'), $class);

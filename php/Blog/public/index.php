@@ -5,6 +5,9 @@ use App\Autoloader as AutoloaderAlias;
 
 require '../app/Autoloader.php';
 AutoloaderAlias::register();
+
 $app = App::getInstance();
 
-var_dump($app->getTable('posts'));
+$posts = $app->getTable('posts');
+
+var_dump($posts->all());

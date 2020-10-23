@@ -12,8 +12,12 @@ class DataBase
     private $db_host;
     private $pdo;
 
-    public function __construct($db_name, $db_user, $db_pass, $db_host)
-    {
+    public function __construct(
+        $db_name,
+        $db_user,
+        $db_pass,
+        $db_host
+    ) {
         $this->db_name = $db_name;
         $this->db_user = $db_user;
         $this->db_pass = $db_pass;
@@ -37,10 +41,18 @@ class DataBase
      * @param  false  $one
      * @return array|mixed
      */
-    public function query($statement, $class_name, $one = false)
-    {
+    public function query(
+        $statement,
+        $class_name = null,
+        $one = false
+    ) {
         $q = $this->getPDO()->query($statement);
-        $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
+
+        if (is_null($class_name)) {
+            $q->setFetchMode(PDO::FETCH_OBJ);
+        } else {
+            $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
+        }
 
         if ($one) {
             $data = $q->fetch();
@@ -58,8 +70,12 @@ class DataBase
      * @param  false  $one
      * @return array|mixed
      */
-    public function prepare($statement, $attributes, $class_name, $one = false)
-    {
+    public function prepare(
+        $statement,
+        $attributes,
+        $class_name,
+        $one = false
+    ) {
         $q = $this->getPDO()->prepare($statement);
         $q->execute($attributes);
         $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
