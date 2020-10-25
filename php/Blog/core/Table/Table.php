@@ -8,7 +8,7 @@ use Core\Database\Database;
 
 class Table
 {
-    protected $table;
+    protected string $table;
     protected DataBase $db;
 
     public function __construct(DataBase $db)
@@ -16,31 +16,44 @@ class Table
         if (is_null($this->table)) {
             $parts = explode('\\', get_class($this));
             $class_name = end($parts);
-            $this->table = strtolower(str_replace('Table', '', $class_name));
+            $this->table = strtolower(str_replace('Table', '', $class_name).'s');
         }
         $this->db = $db;
     }
 
     public function all()
     {
-        return $this->db->query('SELECT * FROM articles');
+        return $this->query('SELECT * FROM '.$this->table);
     }
 
     protected function query($statement, $attributes = null, $one = false)
     {
         if ($attributes) {
-            $this->db->prepare(
+            return $this->db->prepare(
                 $statement,
                 $attributes,
                 str_replace('Table', 'Entity', get_class($this)),
                 $one
             );
         } else {
-            $this->db->query(
+            return $this->db->query(
                 $statement,
                 str_replace('Table', 'Entity', get_class($this)),
                 $one
             );
         }
+    }
+
+    public function find($id)
+    {
+        return $this->query(
+            "
+        SELECT *
+        FROM {$this->table} 
+        WHERE id = ?
+        ",
+            [$id],
+            true
+        );
     }
 }

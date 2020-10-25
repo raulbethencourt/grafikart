@@ -1,8 +1,3 @@
-<?php
-
-?>
-
-
 <div class="row">
     <div class="col-sm-8">
         <?php
@@ -17,13 +12,13 @@
         <?php endforeach; ?>
     </div>
 
-    <!--<div class="col-sm-4">
+    <div class="col-sm-4">
         <ul>
-            <?php /*foreach ( as $categorie): */?>
-                <li><a href="<?/*= $categorie->url */?>"><?/*= $categorie->title */?></a></li>
-            <?php /*endforeach */?>
+            <?php foreach (App::getInstance()->getTable('category')->all() as $category): ?>
+                <li><a href="<?= $category->url ?>"><?= $category->title ?></a></li>
+            <?php endforeach ?>
         </ul>
-        
-    </div>-->
+
+    </div>
 </div>
 

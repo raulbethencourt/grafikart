@@ -60,4 +60,9 @@ class App
     {
         return $this->title;
     }
+
+    public function notFound()
+    {
+        
+    }
 }
