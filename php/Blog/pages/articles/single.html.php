@@ -1,6 +1,5 @@
 <?php
 
-use App\App;
 use App\Table\Article;
 use App\Table\Categorie;
 

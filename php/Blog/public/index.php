@@ -1,13 +1,20 @@
 <?php
+define('ROOT', dirname(__DIR__));
+require ROOT."/app/App.php";
+App::load();
 
-use App\App;
-use App\Autoloader as AutoloaderAlias;
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 'home';
+}
 
-require '../app/Autoloader.php';
-AutoloaderAlias::register();
+ob_start();
+if ($page === 'home') {
+    require ROOT.'/pages/articles/home.html.php';
+}
+$content = ob_get_clean();
 
-$app = App::getInstance();
+require ROOT.'/pages/templates/base.html.php';
 
-$posts = $app->getTable('posts');
 
-var_dump($posts->all());

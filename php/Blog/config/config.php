@@ -4,5 +4,4 @@ return array(
     "db_pass" => "",
     "db_host" => "127.0.0.1",
     "db_name" => "blog",
-
 );

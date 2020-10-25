@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/app/Table/Table.php" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/pages/home.html.php" dialect="MariaDB" />
-    <file url="file://$PROJECT_DIR$/pages/single.html.php" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/app/Table/PostTable.php" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/core/Table/Table.php" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/pages/articles/home.html.php" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/pages/articles/single.html.php" dialect="MySQL" />
   </component>
 </project>

@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace Core\Database;
 
 use PDO;
 
-class DataBase
+class Database
 {
     private $db_name;
     private $db_user;

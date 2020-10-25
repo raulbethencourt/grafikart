@@ -1,6 +1,9 @@
 <?php
 
-namespace App;
+use App\Autoloader;
+use Core\Autoloader as CoreAutoloader;
+use Core\Config;
+use Core\Database\Database;
 
 class App
 {
@@ -17,6 +20,15 @@ class App
         return self::$_instance;
     }
 
+    public static function load(): void
+    {
+        session_start();
+        require ROOT."/app/Autoloader.php";
+        Autoloader::register();
+        require ROOT."/core/Autoloader.php";
+        CoreAutoloader::register();
+    }
+
     /**
      * @param $name
      * @return mixed
@@ -28,13 +40,24 @@ class App
         return new $class_name($this->getDb());
     }
 
-    public function getDb(): DataBase
+    public function getDb(): Database
     {
         if (is_null($this->db_instance)) {
-            $config = Config::getInstance();
-            $this->db_instance = new DataBase($config->get('db_name'), $config->get('db_user'),
-                $config->get('db_pass'), $config->get('db_host'));
+            $config = Config::getInstance(ROOT."/config/config.php");
+            $this->db_instance = new Database(
+                $config->get('db_name'), $config->get('db_user'),
+                $config->get('db_pass'), $config->get('db_host')
+            );
         }
+
         return $this->db_instance;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle(): string
+    {
+        return $this->title;
     }
 }

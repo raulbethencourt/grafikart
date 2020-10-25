@@ -23,12 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46e21b20-7eca-4835-a6f6-f5c0728db60f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Table/PostTable.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Autoloader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/DataBase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Table/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Table/Table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/DataBase.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Database/Database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/CategoriesTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Table/CategoryTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/PostsTable.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Table/Table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Table/UsersTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Table/UserTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/category.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/home.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/home.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/single.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/articles/single.html.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/templates/base.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/base.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,14 +64,20 @@
     <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../MCIR/www/test-sass-bem-grid" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/articles" />
+      <recent name="$PROJECT_DIR$/core" />
+      <recent name="$PROJECT_DIR$/core/table" />
+      <recent name="$PROJECT_DIR$/core/database" />
       <recent name="$PROJECT_DIR$/app/Table" />
-      <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/core" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -94,7 +109,13 @@
       <workItem from="1603300808882" duration="597000" />
       <workItem from="1603445434166" duration="609000" />
       <workItem from="1603460414359" duration="946000" />
-      <workItem from="1603473236624" duration="2507000" />
+      <workItem from="1603473236624" duration="3262000" />
+      <workItem from="1603537451405" duration="597000" />
+      <workItem from="1603543645164" duration="144000" />
+      <workItem from="1603543801682" duration="267000" />
+      <workItem from="1603544081139" duration="1346000" />
+      <workItem from="1603631643450" duration="3408000" />
+      <workItem from="1603637605249" duration="2028000" />
     </task>
     <servers />
   </component>
@@ -122,10 +143,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2188" y="198" width="734" height="646" key="#Inspections/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602708493413" />
-    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects" timestamp="1603478880509">
+    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects" timestamp="1603638928950">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603478880509" />
+    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603638928950" />
     <state x="1969" y="385" width="1171" height="273" key="#SQL_Resolution_Scopes" timestamp="1603053853071">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -146,14 +167,22 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2367" y="236" width="376" height="571" key="#com.intellij.ide.util.MemberChooser/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603269994188" />
-    <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599396032246">
+    <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1603544144348">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1599396032246" />
+    <state x="2336" y="202" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603544144348" />
+    <state x="2000" y="0" width="1101" height="1036" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603639359253">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2000" y="0" width="1101" height="1036" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603639359253" />
     <state x="2292" y="275" width="526" height="493" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603056229102">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2292" y="275" width="526" height="493" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603056229102" />
+    <state x="2342" y="446" width="426" height="151" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1603636297740">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2342" y="446" width="426" height="151" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603636297740" />
     <state x="2341" y="278" width="351" height="417" key="FileChooserDialogImpl" timestamp="1603478874876">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -163,18 +192,18 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="458" key="HiddenNamespacesPopup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602703863220" />
-    <state x="2275" y="233" width="643" height="626" key="NewPhpClassDialog" timestamp="1603269526193">
+    <state x="2275" y="233" width="636" height="633" key="NewPhpClassDialog" timestamp="1603639281665">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2275" y="233" width="643" height="626" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603269526193" />
+    <state x="2275" y="233" width="636" height="633" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603639281665" />
     <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog" timestamp="1603135914585">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603135914585" />
-    <state x="2450" y="153" width="1009" height="737" key="SettingsEditor" timestamp="1603481809944">
+    <state x="2450" y="153" width="1009" height="737" key="SettingsEditor" timestamp="1603543737657">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2450" y="153" width="1009" height="737" key="SettingsEditor/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603481809944" />
+    <state x="2450" y="153" width="1009" height="737" key="SettingsEditor/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603543737657" />
     <state x="2328" y="331" width="454" height="369" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1603054513434">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
