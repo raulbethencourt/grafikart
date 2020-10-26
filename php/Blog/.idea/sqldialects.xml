@@ -3,6 +3,7 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/app/Table/CategoryTable.php" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/app/Table/PostTable.php" dialect="MariaDB" />
+    <file url="file://$PROJECT_DIR$/core/Auth/DBAuth.php" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/core/Table/Table.php" dialect="MariaDB" />
     <file url="file://$PROJECT_DIR$/pages/posts/home.html.php" dialect="MariaDB" />
   </component>

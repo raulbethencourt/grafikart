@@ -23,18 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46e21b20-7eca-4835-a6f6-f5c0728db60f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/App.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Entity/CategoryEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entity/CategoryEntity.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Entity/PostEntity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Entity/PostEntity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Table/CategoryTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Table/CategoryTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Table/PostTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Table/PostTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Table/Table.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Table/Table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/articles/category.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/category.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/articles/home.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/home.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/articles/single.html.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/templates/base.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/templates/base.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +104,7 @@
       <workItem from="1603631643450" duration="3408000" />
       <workItem from="1603637605249" duration="2028000" />
       <workItem from="1603651581353" duration="9716000" />
+      <workItem from="1603724960434" duration="2036000" />
     </task>
     <servers />
   </component>
@@ -140,10 +132,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2188" y="198" width="734" height="646" key="#Inspections/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602708493413" />
-    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects" timestamp="1603657555834">
+    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects" timestamp="1603727529441">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603657555834" />
+    <state x="1898" y="370" width="1314" height="302" key="#SQL_Dialects/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603727529441" />
     <state x="1969" y="385" width="1171" height="273" key="#SQL_Resolution_Scopes" timestamp="1603657566150">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -189,14 +181,14 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="247" height="458" key="HiddenNamespacesPopup/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1602703863220" />
-    <state x="2275" y="233" width="636" height="633" key="NewPhpClassDialog" timestamp="1603657818576">
+    <state x="2275" y="233" width="636" height="633" key="NewPhpClassDialog" timestamp="1603726747547">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2275" y="233" width="636" height="633" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603657818576" />
-    <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog" timestamp="1603135914585">
+    <state x="2275" y="233" width="636" height="633" key="NewPhpClassDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603726747547" />
+    <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog" timestamp="1603726297858">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603135914585" />
+    <state x="2372" y="440" width="365" height="162" key="NewPhpFileDialog/1600.0.1920.1080/0.103.1600.900@1600.0.1920.1080" timestamp="1603726297858" />
     <state x="2450" y="153" width="1009" height="737" key="SettingsEditor" timestamp="1603543737657">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>

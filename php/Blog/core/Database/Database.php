@@ -73,12 +73,17 @@ class Database
     public function prepare(
         $statement,
         $attributes,
-        $class_name,
+        $class_name = null,
         $one = false
     ) {
         $q = $this->getPDO()->prepare($statement);
         $q->execute($attributes);
-        $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
+
+        if (is_null($class_name)) {
+            $q->setFetchMode(PDO::FETCH_OBJ);
+        } else {
+            $q->setFetchMode(PDO::FETCH_CLASS, $class_name);
+        }
 
         if ($one) {
             $data = $q->fetch();
