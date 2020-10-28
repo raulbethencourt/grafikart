@@ -23,9 +23,9 @@ class App
     public static function load(): void
     {
         session_start();
-        require ROOT."/app/Autoloader.php";
+        require ROOT . "/app/Autoloader.php";
         Autoloader::register();
-        require ROOT."/core/Autoloader.php";
+        require ROOT . "/core/Autoloader.php";
         CoreAutoloader::register();
     }
 
@@ -35,7 +35,7 @@ class App
      */
     public function getTable($name)
     {
-        $class_name = 'App\\Table\\'.ucfirst($name).'Table';
+        $class_name = 'App\\Table\\' . ucfirst($name) . 'Table';
 
         return new $class_name($this->getDb());
     }
@@ -43,10 +43,12 @@ class App
     public function getDb(): Database
     {
         if (is_null($this->db_instance)) {
-            $config = Config::getInstance(ROOT."/config/config.php");
+            $config = Config::getInstance(ROOT . "/config/config.php");
             $this->db_instance = new Database(
-                $config->get('db_name'), $config->get('db_user'),
-                $config->get('db_pass'), $config->get('db_host')
+                $config->get('db_name'),
+                $config->get('db_user'),
+                $config->get('db_pass'),
+                $config->get('db_host')
             );
         }
 
@@ -63,6 +65,13 @@ class App
 
     public function notFound()
     {
-        
+        header('HTTP/1.0 404 Not Found');
+        exit('Page introuvable');
+    }
+
+    public function forbidden()
+    {
+        header('HTTP/1.0 403 forbidden');
+        exit('Acces interdit');
     }
 }

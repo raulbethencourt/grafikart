@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Core\Auth;
-
 
 use Core\Database\Database;
 
@@ -23,17 +21,22 @@ class DBAuth
      * @param $password
      * @return bool
      */
-    public function login($username, $password): bool
+    public function login($username, $password)
     {
         $user = $this->db->prepare(
             'SELECT *
-             FROM users u 
-             WHERE u.username = ? ',
+                FROM users u 
+                WHERE u.username = ? ',
             [$username],
             null,
             true
         );
 
         var_dump($user);
+    }
+
+    public function logged()
+    {
+        return isset($_SESSION['auth']);
     }
 }
