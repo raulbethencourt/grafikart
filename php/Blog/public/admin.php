@@ -22,11 +22,14 @@ if (!$auth->logged()) {
 ob_start();
 
 switch ($page) {
-    case 'posts.category':
-        require ROOT . '/pages/admin/posts/category.html.php';
+    case 'posts.edit':
+        require ROOT . '/pages/admin/posts/edit.html.php';
         break;
     case 'posts.show':
         require ROOT . '/pages/admin/posts/show.html.php';
+        break;
+    case 'posts.add':
+        require ROOT . '/pages/admin/posts/add.html.php';
         break;
     default:
         require ROOT . '/pages/admin/posts/index.html.php';

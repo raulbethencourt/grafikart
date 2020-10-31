@@ -50,7 +50,7 @@ class PostTable extends Table
      * @param $id
      * @return PostEntity
      */
-    public function find($id): PostEntity
+    public function findWithCategory($id): PostEntity
     {
         return $this->query(
             "

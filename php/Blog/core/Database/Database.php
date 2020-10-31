@@ -27,7 +27,7 @@ class Database
     private function getPDO(): PDO
     {
         if ($this->pdo === null) {
-            $pdo = new PDO('mysql:dbname='.$this->db_name.';host='.$this->db_host, $this->db_user, $this->db_pass);
+            $pdo = new PDO('mysql:dbname=' . $this->db_name . ';host=' . $this->db_host, $this->db_user, $this->db_pass);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo = $pdo;
         }
@@ -47,6 +47,14 @@ class Database
         $one = false
     ) {
         $q = $this->getPDO()->query($statement);
+
+        if (
+            strpos($statement, 'UPDATE') === 0 ||
+            strpos($statement, 'INSERT') === 0 ||
+            strpos($statement, 'DELETE') === 0
+        ) {
+            return $q;
+        }
 
         if (is_null($class_name)) {
             $q->setFetchMode(PDO::FETCH_OBJ);
@@ -77,7 +85,15 @@ class Database
         $one = false
     ) {
         $q = $this->getPDO()->prepare($statement);
-        $q->execute($attributes);
+        $res = $q->execute($attributes);
+
+        if (
+            strpos($statement, 'UPDATE') === 0 ||
+            strpos($statement, 'INSERT') === 0 ||
+            strpos($statement, 'DELETE') === 0
+        ) {
+            return $res;
+        }
 
         if (is_null($class_name)) {
             $q->setFetchMode(PDO::FETCH_OBJ);

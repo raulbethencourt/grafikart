@@ -40,6 +40,9 @@ class Form
      */
     protected function getValue($index)
     {
+        if (is_object($this->data)) {
+            return $this->data->$index;
+        }
         return isset($this->data[$index]) ? $this->data[$index] : null;
     }
     /**
@@ -51,11 +54,20 @@ class Form
     {
         $type = isset($options['type']) ? $options['type'] : 'text';
         return $this->surround(
-            '<input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '">'
+            '<input type="' . $type . '" name="' . $name . 
+            '" value="' . $this->getValue($name) . '">'
         );
     }
 
-    public function submit():string
+    public function textArea($name, $label, $rows, $cols, $form): string
+    {
+        return $this->surround(
+            '<textarea rows="' . $rows . '" cols="' . $cols . 'name="' . $name . 
+            ' form="' . $form . '">Nouvelle contenu...</textarea>'
+        );
+    }
+
+    public function submit(): string
     {
         return $this->surround('<button type="submit">Envoyer</button>');
     }

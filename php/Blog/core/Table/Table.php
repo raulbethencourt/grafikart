@@ -16,18 +16,21 @@ class Table
         if (is_null($this->table)) {
             $parts = explode('\\', get_class($this));
             $class_name = end($parts);
-            $this->table = strtolower(str_replace('Table', '', $class_name).'s');
+            $this->table = strtolower(str_replace('Table', '', $class_name) . 's');
         }
         $this->db = $db;
     }
 
     public function all()
     {
-        return $this->query('SELECT * FROM '.$this->table);
+        return $this->query('SELECT * FROM ' . $this->table);
     }
 
-    protected function query($statement, $attributes = null, $one = false)
-    {
+    protected function query(
+        $statement,
+        $attributes = null,
+        $one = false
+    ) {
         if ($attributes) {
             return $this->db->prepare(
                 $statement,
@@ -47,13 +50,66 @@ class Table
     public function find($id)
     {
         return $this->query(
-            "
-        SELECT *
-        FROM {$this->table} 
-        WHERE id = ?
-        ",
+            "SELECT *
+            FROM {$this->table} 
+            WHERE id = ?",
             [$id],
             true
         );
+    }
+
+    /**
+     * @param int $id
+     * @param $fields
+     */
+    public function update($id, $fields)
+    {
+        $sql_parts = [];
+        $attributes = [];
+
+        foreach ($fields as $k => $v) {
+            $sql_parts[] = "$k = ?";
+            $attributes[] = $v;
+        }
+        $attributes[] = (int)$id;
+        $sql_part = implode(', ', $sql_parts);
+
+        return $this->query(
+            "UPDATE {$this->table}
+            SET $sql_part
+            WHERE id=?",
+            $attributes,
+            true
+        );
+    }
+
+    public function create($fields)
+    {
+        $sql_parts = [];
+        $attributes = [];
+
+        foreach ($fields as $k => $v) {
+            $sql_parts[] = "$k = ?";
+            $attributes[] = $v;
+        }
+        $sql_part = implode(', ', $sql_parts);
+
+        return $this->query(
+            "INSERT INTO {$this->table}
+            SET $sql_part
+            WHERE id=?",
+            $attributes,
+            true
+        );
+    }
+
+    public function extract($key, $value)
+    {
+        $records = $this->all();
+        $return = [];
+        foreach ($records as $v) {
+            $return[$v->$key] = $v->$value;
+        }
+        return $return;
     }
 }
