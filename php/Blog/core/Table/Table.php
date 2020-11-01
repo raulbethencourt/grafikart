@@ -96,8 +96,7 @@ class Table
 
         return $this->query(
             "INSERT INTO {$this->table}
-            SET $sql_part
-            WHERE id=?",
+            SET $sql_part",
             $attributes,
             true
         );

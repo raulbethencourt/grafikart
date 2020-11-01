@@ -109,4 +109,9 @@ class Database
 
         return $data;
     }
+
+    public function lasInsertId()
+    {
+        return $this->getPDO()->lastInsertId();
+    }
 }

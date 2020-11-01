@@ -23,6 +23,11 @@ $posts = App::getInstance()->getTable('post')->all();
                 <td><?= $post->titre ?></td>
                 <td>
                     <a href="?p=posts.edit&id=<?= $post->id ?>" class="btn btn-secondary">Editer</a>
+
+                    <form action="?p=posts.delete">
+                        <input type="hidden" name="id" value="<?= $post->id ?>">
+                        <button type="submit" class="btn btn-danger" href="?p=posts.delete&id=<?= $post->id ?>">Supprimer</button>
+                    </form>
                 </td>
             </tr>
         <?php endforeach; ?>

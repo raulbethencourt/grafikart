@@ -8,15 +8,12 @@ if (!empty($_POST)) {
     $result = $postTable->create([
         'titre' => $_POST['titre'],
         'contenu' => $_POST['contenu'],
-        'categories_id' => $_POST['categories_id']
+        'categories_id' => $_POST['categories_id'],
+        'date' => date("Y-m-d")
     ]);
 
     if ($result) {
-?>
-        <div class="alert alert-success">
-            L'article a bien été ajouté
-        </div>
-<?php
+        header('Location: admin.php?p=posts.edit&id=' . App::getInstance()->getDb()->lasInsertId());
     }
 }
 $categories = App::getInstance()->getTable('category')->extract('id', 'title');
