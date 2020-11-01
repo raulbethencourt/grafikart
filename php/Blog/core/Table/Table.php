@@ -27,9 +27,9 @@ class Table
     }
 
     protected function query(
-        $statement,
-        $attributes = null,
-        $one = false
+        string $statement,
+        array $attributes = null,
+        bool $one = false
     ) {
         if ($attributes) {
             return $this->db->prepare(
@@ -47,7 +47,7 @@ class Table
         }
     }
 
-    public function find($id)
+    public function find(int $id)
     {
         return $this->query(
             "SELECT *
@@ -58,11 +58,7 @@ class Table
         );
     }
 
-    /**
-     * @param int $id
-     * @param $fields
-     */
-    public function update($id, $fields)
+    public function update(int $id, array $fields)
     {
         $sql_parts = [];
         $attributes = [];
@@ -83,7 +79,7 @@ class Table
         );
     }
 
-    public function create($fields)
+    public function create(array $fields)
     {
         $sql_parts = [];
         $attributes = [];
@@ -98,6 +94,16 @@ class Table
             "INSERT INTO {$this->table}
             SET $sql_part",
             $attributes,
+            true
+        );
+    }
+
+    public function delete (int $id)
+    {
+        return $this->query(
+            "DELETE FROM {$this->table}
+            WHERE id = ?",
+            [$id],
             true
         );
     }

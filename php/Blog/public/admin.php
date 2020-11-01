@@ -22,6 +22,18 @@ if (!$auth->logged()) {
 ob_start();
 
 switch ($page) {
+    case 'categories.edit':
+        require ROOT . '/pages/admin/categories/edit.html.php';
+        break;
+    case 'categories.show':
+        require ROOT . '/pages/admin/categories/show.html.php';
+        break;
+    case 'categories.add':
+        require ROOT . '/pages/admin/categories/add.html.php';
+        break;
+    case 'categories.delete':
+        require ROOT . '/pages/admin/categories/delete.html.php';
+        break;
     case 'posts.edit':
         require ROOT . '/pages/admin/posts/edit.html.php';
         break;
@@ -31,8 +43,11 @@ switch ($page) {
     case 'posts.add':
         require ROOT . '/pages/admin/posts/add.html.php';
         break;
+    case 'posts.delete':
+        require ROOT . '/pages/admin/posts/delete.html.php';
+        break;
     default:
-        require ROOT . '/pages/admin/posts/index.html.php';
+        require ROOT . '/pages/admin/index.html.php';
         break;
 }
 
