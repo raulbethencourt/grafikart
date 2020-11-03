@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Core\Table;
 
 
@@ -98,7 +97,7 @@ class Table
         );
     }
 
-    public function delete (int $id)
+    public function delete(int $id)
     {
         return $this->query(
             "DELETE FROM {$this->table}
