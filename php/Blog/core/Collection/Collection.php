@@ -24,10 +24,30 @@ class Collection implements IteratorAggregate, ArrayAccess
     public function __get($key)
     {
         $index = explode('.', $key);
-        if ($this->__has($key)) {
-            return $this->data[$key];
+        return $this->getValue($index, $this->data);
+    }
+
+    /**
+     * Iterative loop to get specific value
+     *
+     * @param array $indexes
+     * @param mixed $value
+     */
+    private function getValue(array $indexes, $value)
+    {
+        $key = array_shift($indexes);
+
+        if(empty($indexes)){
+            if (!array_key_exists($key, $value)) {
+                return null;
+            }
+
+            if(is_array($value[$key])){
+                return new Collection($value[$key]);
+            }
+            return $value[$key];
         }
-        return false;
+        return $this->getValue($indexes, $value[$key]);
     }
 
     /**
@@ -88,6 +108,19 @@ class Collection implements IteratorAggregate, ArrayAccess
     public function __join($glue): string
     {
         return implode($glue, $this->data);
+    }
+
+    /**
+     * Give maximal result from array
+     *
+     * @param mixed $key
+     */
+    public function __max($key = false)
+    {
+        if ($key) {
+            return $this->__extract($key)->__max();
+        }
+        return max($this->data);
     }
 
     /**

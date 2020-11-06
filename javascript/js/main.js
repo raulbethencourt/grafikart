@@ -242,11 +242,13 @@ marion.nom = "Marion";
 console.log(raul.media());
 console.log(jairo.present());
 
+// Constructor JS equivalent 
 const Trabajador = function (nom, notes) {
     this.nom = nom;
     this.notes = notes;
 };
 
+// Adding functions to the Class/Object Trabajador
 Trabajador.prototype.media = function () {
     let somme = 0;
     notes = this.notes;
@@ -256,20 +258,41 @@ Trabajador.prototype.media = function () {
     return somme / notes.length;
 };
 
+Trabajador.prototype.sing = function () { 
+    return "Lalalala " + this.nom; 
+}
+
+// Object instance
 const sara = new Trabajador("Sara", [20, 16, 13]);
 const luicho = new Trabajador("Luicho", [14, 16, 12]);
+
+
+/************* 
+ * Try Catch * 
+ *************/
 
 let a = {};
 
 try {
-    a.maMethode();
+    a.maMethode(); //we try the code
 } catch (e) {
-    console.log("J'ai rencontré une erreur " + e);
+    console.log("J'ai rencontré une erreur " + e.stack); // We catch the error
 } finally {
-    console.log("finally");
+    console.log("finally"); // We execute the code no mather what happen
 }
 
-console.log("salut");
+// We throw new error in certain cases, usually inside functions that could fail
+var demo = nombre => {
+    if (nombre > 5) {
+        throw new Error('El numero no puede ser superior a 5', 'test', 14); 
+    }
+    return nombre * 2;
+}
+
+
+/***************** 
+ * Window Object * 
+ *****************/
 
 (function () {
     window.alert("Salut les gens");
