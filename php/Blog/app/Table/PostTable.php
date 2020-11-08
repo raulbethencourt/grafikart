@@ -8,7 +8,7 @@ use Core\Table\Table;
 
 class PostTable extends Table
 {
-    protected string $table = 'articles';
+    protected $table = 'articles';
 
     /**
      * Recovery the last posts

@@ -7,7 +7,7 @@ use Core\Table\Table;
 
 class CategoryTable extends Table
 {
-    protected string $table = 'categories';
+    protected $table = 'categories';
 
     public function all()
     {

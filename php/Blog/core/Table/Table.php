@@ -7,8 +7,8 @@ use Core\Database\Database;
 
 class Table
 {
-    protected string $table;
-    protected DataBase $db;
+    protected $table;
+    protected $db;
 
     public function __construct(DataBase $db)
     {

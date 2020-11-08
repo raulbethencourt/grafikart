@@ -1,4 +1,8 @@
 <?php
+
+use App\Controller\PostController;
+use App\Controller\UserController;
+
 define('ROOT', dirname(__DIR__));
 require ROOT . "/app/App.php";
 App::load();
@@ -9,23 +13,22 @@ if (isset($_GET['p'])) {
     $page = 'home';
 }
 
-ob_start();
-
 switch ($page) {
     case 'posts.category':
-        require ROOT . '/pages/posts/category.html.php';
+        $controller = new PostController();
+        $controller->category();
         break;
     case 'posts.show':
-        require ROOT . '/pages/posts/show.html.php';
+        $controller = new PostController();
+        $controller->show();
         break;
     case 'login':
-        require ROOT . '/pages/users/login.html.php';
+        $controller = new UserController();
+        $controller->login();
         break;
     default:
-        require ROOT . '/pages/posts/home.html.php';
+        $controller = new PostController();
+        $controller->index();
         break;
 }
 
-$content = ob_get_clean();
-
-require ROOT . '/pages/templates/base.html.php';
