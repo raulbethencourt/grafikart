@@ -62,16 +62,4 @@ class App
     {
         return $this->title;
     }
-
-    public function notFound()
-    {
-        header('HTTP/1.0 404 Not Found');
-        exit('Page introuvable');
-    }
-
-    public function forbidden()
-    {
-        header('HTTP/1.0 403 forbidden');
-        exit('Acces interdit');
-    }
 }

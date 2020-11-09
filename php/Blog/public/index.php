@@ -1,8 +1,5 @@
 <?php
 
-use App\Controller\PostController;
-use App\Controller\UserController;
-
 define('ROOT', dirname(__DIR__));
 require ROOT . "/app/App.php";
 App::load();
@@ -10,25 +7,19 @@ App::load();
 if (isset($_GET['p'])) {
     $page = $_GET['p'];
 } else {
-    $page = 'home';
+    $page = 'posts.index';
 }
 
-switch ($page) {
-    case 'posts.category':
-        $controller = new PostController();
-        $controller->category();
-        break;
-    case 'posts.show':
-        $controller = new PostController();
-        $controller->show();
-        break;
-    case 'login':
-        $controller = new UserController();
-        $controller->login();
-        break;
-    default:
-        $controller = new PostController();
-        $controller->index();
-        break;
-}
+$page = explode('.', $page);
 
+if ($page[0] == 'admin') {
+    $controller = '\App\Controller\Admin\\' . ucfirst($page[1]) . 'Controller';
+    $action = $page[2];
+} else {
+    $controller = '\App\Controller\\' . ucfirst($page[0]) . 'Controller';
+    $action = $page[1];
+}
+$controller = new $controller();
+$controller->$action();
+
+//TODO Continuo en POO 22/31: Fluent

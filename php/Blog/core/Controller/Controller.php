@@ -2,16 +2,29 @@
 
 namespace Core\Controller;
 
-class Controller
+abstract class Controller
 {
     protected $viewPath;
     protected $template;
 
-    public function render($view)
+    protected function render($view, $variables = [])
     {
         ob_start();
-        require($this->viewPath . str_replace('.', '/', $view) . '.php');
+        extract($variables);
+        require($this->viewPath . str_replace('.', '/', $view) . '.html.php');
         $content = ob_get_clean();
-        require($this->viewPath . 'templates/' . $this->template . '.php');
+        require($this->viewPath . 'templates/' . $this->template . '.html.php');
+    }
+
+    protected function notFound()
+    {
+        header('HTTP/1.0 404 Not Found');
+        exit('Page introuvable');
+    }
+
+    protected function forbidden()
+    {
+        header('HTTP/1.0 403 forbidden');
+        exit('Acces interdit');
     }
 }

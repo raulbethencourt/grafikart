@@ -1,17 +1,4 @@
-<?php
-$app = App::getInstance();
-
-$category = $app->getTable('category');
-
-if ($category === false) {
-    $app->notFound();
-}
-
-$posts = $app->getTable('post')->lastByCategory($_GET['id']);
-$categories = $category->all();
-?>
-
-<h1><?= $category->find($_GET['id'])->title ?></h1>
+<h1><?= $category->title ?></h1>
 
 <div class="row">
     <div class="col-sm-8">
