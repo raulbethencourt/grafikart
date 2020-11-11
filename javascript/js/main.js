@@ -235,7 +235,7 @@ const jairo = {
 raul.__proto__ = estudiante;  // no utilisar nunca este sistema
 jairo.__proto__ = estudiante;
 
-var marion = Object.create(estudiante); // buena manera de crear con prototipo
+let marion = Object.create(estudiante); // buena manera de crear con prototipo
 marion.notes = [18, 19, 18];
 marion.nom = "Marion";
 
@@ -282,7 +282,7 @@ try {
 }
 
 // We throw new error in certain cases, usually inside functions that could fail
-var demo = nombre => {
+let demo = nombre => {
     if (nombre > 5) {
         throw new Error('El numero no puede ser superior a 5', 'test', 14); 
     }
@@ -294,19 +294,20 @@ var demo = nombre => {
  * Window Object * 
  *****************/
 
-(function () {
-    window.alert("Salut les gens");
+(() => {
+    window.alert("Salut les gens"); // Shows an alert sign with our message
 
-    let demo = window.prompt("entra tu respuesta");
+    let demo = window.prompt("entra tu respuesta"); // You can enter information
     console.log(demo);
 
-    let test = window.confirm("El universo se destruye poco a poco");
+    let test = window.confirm("El universo se destruye poco a poco"); // Question true or false
     console.log(test);
 })();
 
-(function () {
+// Work with variables inside a function protected as from have a variable that move every where
+(() => {
     let numero = window.prompt("Elige un numero entre 1 y 10");
-    let deviner = Math.round(Math.random() * 10);
+    let deviner = Math.round(Math.random() * 10); // Random number 
     while (numero != deviner) {
         console.log(numero);
         if (numero < 1 || numero > 10) {
@@ -321,18 +322,22 @@ var demo = nombre => {
     }
     window.alert("bravo, acertaste");
 
-    var i = 0;
-    let timer = window.setInterval(function () {
+    // Here we set an interval base in quantity time
+    let i = 0;
+    const timer = window.setInterval(function () {
         i++;
         console.log(i);
         if (i === 10) {
             window.clearInterval(timer);
         }
-    }, 1000);
+    }, 1000); // time in miliseconds
 })();
 
-let ps = document.querySelectorAll("p");
+/*******
+ * DOM * 
+ *******/
 
+const ps = document.querySelectorAll("p");
 for (let i = 0; i < ps.length; i++) {
     (function (p) {
         window.setInterval(function () {
