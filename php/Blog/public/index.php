@@ -21,5 +21,3 @@ if ($page[0] == 'admin') {
 }
 $controller = new $controller();
 $controller->$action();
-
-//TODO Continuo en POO 22/31: Fluent
