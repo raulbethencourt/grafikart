@@ -126,7 +126,7 @@ if (pair(1)) {
     console.log("es par");
 }
 
-let media = function (eleves) {
+let media = (eleves) => {
     for (let i = 0; i < eleves.length; i++) {
         let eleve = eleves[i];
         if (eleve["media"] >= 5) {
@@ -137,7 +137,7 @@ let media = function (eleves) {
 
 media(eleves);
 
-let lamedia = function (eleves) {
+let lamedia = (eleves) => {
     let media = [];
 
     for (let i = 0; i < eleves.length; i++) {
@@ -154,7 +154,7 @@ console.log(lamedia(eleves));
 let phrase =
     "There are many letiations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non - characteristic words etc.";
 
-let frequence = function (phrase) {
+let frequence = (phrase) => {
     let mots = phrase.toLowerCase().split(" ");
     let compteur = {};
     for (let i = 0; i < mots.length; i++) {
@@ -194,10 +194,10 @@ console.log(estMeilleur(eleve1, eleve2));
 
 const alumno = {
     nom: "Jean",
-    present: function () {
+    present: () => {
         let self = this;
         let demo = {
-            demo: function () {
+            demo: () => {
                 console.log(self.nom);
             },
         };
@@ -232,7 +232,7 @@ const jairo = {
     nom: "Jairo",
     notes: [15, 13, 12],
 };
-raul.__proto__ = estudiante;  // no utilisar nunca este sistema
+raul.__proto__ = estudiante; // no utilisar nunca este sistema
 jairo.__proto__ = estudiante;
 
 let marion = Object.create(estudiante); // buena manera de crear con prototipo
@@ -258,8 +258,8 @@ Trabajador.prototype.media = function () {
     return somme / notes.length;
 };
 
-Trabajador.prototype.sing = function () { 
-    return "Lalalala " + this.nom; 
+Trabajador.prototype.sing = function () {
+    return "Lalalala " + this.nom;
 }
 
 // Object instance
@@ -284,7 +284,7 @@ try {
 // We throw new error in certain cases, usually inside functions that could fail
 let demo = nombre => {
     if (nombre > 5) {
-        throw new Error('El numero no puede ser superior a 5', 'test', 14); 
+        throw new Error('El numero no puede ser superior a 5', 'test', 14);
     }
     return nombre * 2;
 }
@@ -337,6 +337,11 @@ let demo = nombre => {
  * DOM * 
  *******/
 
+const p = document.querySelectorAll('#text')[0]; // How to get tag in the DOM
+p.className = 'red'; // To change tag class
+p.style.fontSize = "30px"; //To add some CSS to a tag with JS
+p.innerHTML = "texto de prueba cambia lo que estaba escrito";
+
 const ps = document.querySelectorAll("p");
 for (let i = 0; i < ps.length; i++) {
     (function (p) {
@@ -367,12 +372,17 @@ var li2 = document.createElement("li");
 li2.textContent = "hola la penyita";
 li.parentElement.appendChild(li2);
 
+// To replace elements
 li.parentElement.replaceChild(li2, li);
 
+// TO change un element by unother 
 let last = document.querySelector("ul").lastElementChild;
 li.parentElement.insertBefore(last, li2);
 
-// Les évènements
+/******************
+ * Les évènements * 
+ ******************/
+
 let text = document.querySelectorAll("p");
 let list = document.querySelectorAll("li");
 let btn = document.querySelector("#btn");

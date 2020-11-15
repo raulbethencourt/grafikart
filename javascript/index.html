@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/menu.css">
-    <title>JS tuto</title>
-</head>
-<body>
-    <header>
-        <img src="" alt="">
 
-        <nav>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-            <p>test</p>
-        </nav>
-    </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <title>JS tuto</title>
+    <style>
+        .red {
+            color: #c73b3b;
+        }
+
+        .blue {
+            color: #4848b3;
+        }
+
+        .text {
+            transition: color 2s;
+        }
+
+        .spoiler__content {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: opacity 1s;
+        }
+
+        .spoiler__content.visible {
+            display: inline;
+            width: auto;
+            height: auto;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
     <main>
-        <p style>test</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <button id="btn">click me</button>
     </main>
     <script src="js/main-2.0.js"></script>
 </body>
+
 </html>
