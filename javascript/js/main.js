@@ -389,53 +389,52 @@ let btn = document.querySelector("#btn");
 let link = document.querySelector("#external");
 let sbtn = document.querySelector(".spoiler button");
 
-for (let i = 0; i < text.length; i++) {
-    const p = text[i];
-    let red = function () {
+text.forEach(p => {
+    btn.addEventListener("click", () => {
         p.classList.toggle("red");
-    };
-    btn.addEventListener("click", red);
-}
+    });
+});
 
-for (let f = 0; f < list.length; f++) {
-    const li = list[f];
-    li.addEventListener("mouseover", function () {
+list.forEach(li => {
+    li.addEventListener("mouseover", () => {
         this.classList.add("blue");
     });
 
-    li.addEventListener("mouseout", function () {
+    li.addEventListener("mouseout", () => {
         this.classList.remove("blue");
     });
-}
+});
 
-link.addEventListener("click", function (e) {
-    e.stopPropagation();
-    var reponse = window.confirm("Quiere, realmente salir de esta pagina?");
+link.addEventListener("click", (event) => { //e equal to evenement in this case 'click'
+    event.stopPropagation(); //Stop start events related of tag parents
+    let reponse = window.confirm("Quiere, realmente salir de esta pagina?");
     if (reponse === false) {
-        e.preventDefault();
+        event.preventDefault(); //Stop default behavior 
     }
 });
 
-document.querySelector("#input").addEventListener("keydown", function (e) {
-    let lettre = String.fromCharCode(e.keyCode);
+document.querySelector("#input").addEventListener("keydown", (e) => {
+    let lettre = String.fromCharCode(e.keyCode); // evenment keyCode function deprecated 
     if (lettre != "A") {
         e.preventDefault();
     }
 });
 
 let cp = document.querySelector("#cp");
-cp.focus();
-document.querySelector("#form").addEventListener("submit", function (e) {
+cp.focus(); //To focus when enter in page
+document.querySelector("#form").addEventListener("submit", (e) => {
     let cp = document.querySelector("#cp");
     if (cp.value.length != 5) {
         alert("Le code postal n'est pas bon");
         e.preventDefault();
     }
-    let mention = document.querySelector("#mention").checked;
+    let mention = document.querySelector("#mention").checked; //To get if checkbox its checked
     if (!mention) {
         alert("debe acceptar las condisiones legales");
         e.preventDefault();
     }
+
+    //Get the options from select input and transform in int
     let age = parseInt(
         document.querySelector("#age").selectedOptions[0].value,
         10
@@ -446,23 +445,26 @@ document.querySelector("#form").addEventListener("submit", function (e) {
     }
 });
 
-//spoiler
-let elements = document.querySelectorAll(".spoiler");
+/******************
+ * Sopiler system * 
+ ******************/
 
-let createSpoilerButton = function (element) {
+const elements = document.querySelectorAll(".spoiler");
+
+let createSpoilerButton = (elem) => {
     //creates span .spoiler__content
     let span = document.createElement("span");
     span.className = "spoiler__content";
-    span.innerHTML = element.innerHTML;
+    span.innerHTML = elem.innerHTML;
 
     //creates button
     let button = document.createElement("button");
     button.textContent = "Affiche le spoiler";
 
     //Add elements to DOM
-    element.innerHTML = "";
-    element.appendChild(button);
-    element.appendChild(span);
+    elem.innerHTML = "";
+    elem.appendChild(button);
+    elem.appendChild(span);
 
     //click evenement
     button.addEventListener("click", function () {
@@ -471,6 +473,6 @@ let createSpoilerButton = function (element) {
     });
 };
 
-for (let i = 0; i < elements.length; i++) {
-    createSpoilerButton(elements[i]);
-}
+elements.forEach(el => {
+    createSpoilerButton(el);
+});
