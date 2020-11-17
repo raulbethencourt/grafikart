@@ -20,9 +20,12 @@ class App
         return self::$_instance;
     }
 
+    /**
+     * This function starts The Session and the Autoload
+     */
     public static function load(): void
     {
-        session_start();
+        session_start(); 
         require ROOT . "/app/Autoloader.php";
         Autoloader::register();
         require ROOT . "/core/Autoloader.php";

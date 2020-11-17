@@ -19,6 +19,22 @@
 
     <main role="main" class="container" style="padding-top: 100px">
         <div class="starter-template">
+            <?php
+            //TODO grafikart 25/31 
+            use App\Entity\Flash;
+            use App\Entity\Session;
+            use App\Entity\Cookie;
+
+            $session = new Session();
+            $cookie = new Cookie();
+            $flash = new Flash($session);
+            $flash->set('Il y a eu une errour', 'danger');
+            var_dump($cookie); 
+            var_dump($flash);
+            var_dump($cookie);
+            ?>
+            <?= $flash->get() ?>
+
             <?= $content; ?>
         </div>
     </main>
