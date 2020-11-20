@@ -1,27 +1,28 @@
+
 const elements = document.querySelectorAll(".spoiler");
 
-let createSpoilerButton = (elem) => {
+const createSpoilerButton = (elem) => {
     //creates span .spoiler__content
-    let span = document.createElement("span");
+    const span = document.createElement("span");
     span.className = "spoiler__content";
     span.innerHTML = elem.innerHTML;
-
-    //creates button
-    let button = document.createElement("button");
-    button.textContent = "Affiche le spoiler";
-
+    
+    //creates btn
+    const btn = document.createElement("button");
+    btn.textContent = "Affiche le spoiler";
+    
     //Add elements to DOM
     elem.innerHTML = "";
-    elem.appendChild(button);
+    elem.appendChild(btn);
     elem.appendChild(span);
-
-    //click evenement
-    button.addEventListener("click", function () {
+    
+    //click event
+    btn.addEventListener("click", () => {
         span.classList.add("visible");
-        button.remove(button);
+        btn.remove(btn);
     });
 };
 
-elements.forEach(el => {
-    createSpoilerButton(el);
+elements.forEach(elem => {
+    createSpoilerButton(elem);
 });
