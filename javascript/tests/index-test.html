@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <title>JS tuto</title>
+    <style>
+        .red {
+            color: #c73b3b;
+        }
+
+        .blue {
+            color: #4848b3;
+        }
+
+        .text {
+            transition: color 2s;
+        }
+
+        .spoiler__content {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: opacity 1s;
+        }
+
+        .spoiler__content.visible {
+            display: inline;
+            width: auto;
+            height: auto;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h2>SPOILER</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus iusto, voluptatem alias impedit adipisci
+            pariatur
+            quae minima porro vero a perspiciatis animi ipsum ut illum molestias iure odio enim aperiam!</p>
+
+        <p class="spoiler">
+            Monsieur X meurt à la fin
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ducimus? Vitae recusandae, dolorum quasi
+            cumque
+            id quas? In amet perspiciatis molestiae debitis esse, pariatur at ex veniam dignissimos itaque numquam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span class="spoiler"> molestias temporibus sed
+                eligendi saepe minima
+                recusandae maxime?</span> Maxime iste commodi quibusdam error sit tempora laudantium? Earum illum
+            doloremque voluptatum
+            fuga?</p>
+    </main>
+    <script src="js/main-2.0.js"></script>
+</body>
+
+</html>
