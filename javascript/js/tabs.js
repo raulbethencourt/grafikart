@@ -1,6 +1,6 @@
 // Launch app
 document.addEventListener("readystatechange", (evt) => {
-	if (evt.target.readyState === "complete") {
+	if (evt.target.readyState === "complete"){
 		initApp();
 	}
 });
@@ -11,8 +11,8 @@ const initApp = () => {
     const a = document.querySelector('a[href="' + hash + '"]');
 
     const showTab = (a) => {
-        let li = a.parentNode;
-        let div = a.parentNode.parentNode.parentNode;
+        const li = a.parentNode;
+        const div = a.parentNode.parentNode.parentNode;
 
         if (li.classList.contains("active")) {
             return false;

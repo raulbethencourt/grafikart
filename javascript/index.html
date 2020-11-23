@@ -1,79 +1,42 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/tabs.css" />
-		<script src="js/tabs.js"></script>
-		<title>Système d'onglets</title>
+		<link rel="stylesheet" href="css/menu.css" />
+		<script src="js/menu.js"></script>
+		<title>Sticky Menu</title>
 	</head>
-
 	<body>
-		<div>
-			<ul class="tabs">
-				<li class="active"><a href="#home">Accueil</a></li>
-				<li><a href="#mentions">Mentions</a></li>
-				<li><a href="#about">A propos</a></li>
-			</ul>
-			<div class="tabs-content">
-				<div class="tab-content active" id="home">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Quidem laborum nam voluptatem eius, nisi maxime, inventore,
-					excepturi placeat praesentium amet exercitationem cupiditate
-					ea repellat! Molestias officia laboriosam voluptatibus aut
-					sequi. Lorem ipsum dolor sit, amet consectetur adipisicing
-					elit. Iusto animi sint quidem ipsa tempora non consectetur,
-					omnis repellat ad accusantium exercitationem, sed harum
-					inventore incidunt adipisci necessitatibus temporibus
-					ratione! Id!
-				</div>
-				<div class="tab-content" id="mentions">
-					Dolor sit amet consectetur adipisicing elit. Quidem laborum
-					nam voluptatem eius, nisi maxime, inventore, excepturi
-					placeat praesentium amet exercitationem cupiditate ea
-					repellat! Molestias officia laboriosam voluptatibus aut
-					sequi.
-				</div>
-				<div class="tab-content" id="about">
-					Quidem laborum nam voluptatem eius, nisi maxime, inventore,
-					excepturi placeat praesentium amet exercitationem cupiditate
-					ea repellat! Molestias officia laboriosam voluptatibus aut
-					sequi.
-				</div>
-			</div>
-		</div>
+		<div class="topbar">LOGO</div>
 
-		<div>
-			<ul class="tabs">
-				<li class="active"><a href="#home2">Accueil</a></li>
-				<li><a href="#mentions2">Mentions</a></li>
-				<li><a href="#about2">A propos</a></li>
-			</ul>
-			<div class="tabs-content">
-				<div class="tab-content active" id="home2">
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-					Quidem laborum nam voluptatem eius, nisi maxime, inventore,
-					excepturi placeat praesentium amet exercitationem cupiditate
-					ea repellat! Molestias officia laboriosam voluptatibus aut
-					sequi.
-				</div>
-				<div class="tab-content" id="mentions2">
-					Dolor sit amet consectetur adipisicing elit. Quidem laborum
-					nam voluptatem eius, nisi maxime, inventore, excepturi
-					placeat praesentium amet exercitationem cupiditate ea
-					repellat! Molestias officia laboriosam voluptatibus aut
-					sequi.
-				</div>
-				<div class="tab-content" id="about2">
-					Quidem laborum nam voluptatem eius, nisi maxime, inventore,
-					excepturi placeat praesentium amet exercitationem cupiditate
-					ea repellat! Molestias officia laboriosam voluptatibus aut
-					sequi. Lorem ipsum dolor sit amet consectetur adipisicing
-					elit. Quos quis placeat veniam voluptates mollitia molestias
-					consequatur recusandae ducimus, cum hic a, minus eligendi
-					minima sit? Numquam unde praesentium corporis magni.
+		<div class="menu" data-sticky data-offset="">
+			<a href="#">Item 1</a>
+			<a href="#">Item 2</a>
+			<a href="#">Item 3</a>
+			<a href="#">Item 4</a>
+			<a href="#">Item 5</a>
+		</div>
+		<div class="content">
+			<div class="main">
+				<h1>Title</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+					Non rerum aliquam eligendi doloremque placeat. Laborum
+					soluta, minima in iusto delectus optio eligendi unde odio
+					provident a, at quo, iste saepe?
+				</p>
+				<div style="background-color: #d5d5d5; height: 4000px"></div>
+			</div>
+			<div class="sidebar">
+				<div class="block" data-sticky data-offset="68" data-constraint=".sidebar">
+					<a href="#"
+						>Lorem ipsum dolor sit amet consectetur, adipisicing
+						elit.
+					</a>
 				</div>
 			</div>
-		</div>
+        </div>
+        <div style="clear: both;"></div>
 	</body>
 </html>
