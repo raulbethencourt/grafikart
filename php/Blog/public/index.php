@@ -1,5 +1,12 @@
 <?php
 
+require_once __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Finder\Finder;
+
+$finder = new Finder();
+$finder->in('../app/');
+
 define('ROOT', dirname(__DIR__));
 require ROOT . "/app/App.php";
 App::load();

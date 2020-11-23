@@ -21,27 +21,26 @@
         <div class="starter-template">
             <?php
 
-            use App\Entity\Flash;
             use App\Entity\Session;
-            use App\Entity\Cookie;
             use Core\Dic\DIC;
 
-            $session = new Session();
-            $cookie = new Cookie();
-            $flash = new Flash($session);
-            $flash->set('Il y a eu une errour', 'danger');
-
             $dic = new DIC();
-            $dic->set('Cookie', function(){
-                return new Cookie();
+            $session = $dic->set('Session', function () {
+                return new Session();
             });
-            $dic->get('Cookie')->set('Timeout', $session);
-        
-            // TODO 26/31  9:37 
 
-            var_dump($dic->get('Cookie'));
+            var_dump($dic->get('Session'));
+
+            use Symfony\Component\DependencyInjection\ContainerBuilder;
+
+            $containerBuilder = new ContainerBuilder();
+            $flash = $containerBuilder
+                ->register('flash', 'Flash')
+                ->addArgument($session);
+                var_dump($flash);
             ?>
-            <?= $flash->get() ?>
+
+            <!-- <?= $flash->get() ?> -->
 
             <?= $content; ?>
         </div>

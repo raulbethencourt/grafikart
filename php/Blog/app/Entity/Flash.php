@@ -7,11 +7,13 @@ use Core\Interfaces\SessionInterface;
 class Flash
 {
     private $session;
+    private $injection;
     const KEY = 'c_flash';
 
-    public function __construct(SessionInterface $session)
+    public function __construct(SessionInterface $session, $injection = [])
     {
         $this->session = $session;
+        $this->injection = $injection;
     }
 
     public function set($msg, $type = 'success')
