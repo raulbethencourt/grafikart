@@ -21,26 +21,45 @@
         <div class="starter-template">
             <?php
 
+            use App\adapter\DoctrineCacheAdapter;
+            use App\Controller\TestController;
+            use App\Entity\Flash;
             use App\Entity\Session;
             use Core\Dic\DIC;
+            use Doctrine\Common\Cache\FilesystemCache;
 
+            // Home made DependencyInjection
             $dic = new DIC();
-            $session = $dic->set('Session', function () {
+            $dic->set('Session', function () {
                 return new Session();
             });
+            $session = $dic->get('Session');
+            $session->set('frizzer', 'icecaps');
+            var_dump($session);
 
-            var_dump($dic->get('Session'));
-
+            // Symfony DependencyInjection
             use Symfony\Component\DependencyInjection\ContainerBuilder;
 
             $containerBuilder = new ContainerBuilder();
-            $flash = $containerBuilder
+            $containerBuilder
                 ->register('flash', 'Flash')
                 ->addArgument($session);
-                var_dump($flash);
-            ?>
 
-            <!-- <?= $flash->get() ?> -->
+            // Interface utilization SessionInterface
+            $session = new Session();
+            $flash = new Flash($session);
+            $flash->set('danger danger...', 'danger');
+
+
+            // Adapter design pattern Cache
+            $cache = new FilesystemCache(ROOT . '/app/cache');
+            $adapter = new DoctrineCacheAdapter($cache);
+            $test = new TestController();
+            ?>
+            <h1>
+                <?= $test->sayHello($adapter) ?>
+            </h1>
+            <?= $flash->get() ?>
 
             <?= $content; ?>
         </div>

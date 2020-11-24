@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Symfony\Component\Finder\Finder;
 
@@ -28,4 +28,3 @@ if ($page[0] == 'admin') {
 }
 $controller = new $controller();
 $controller->$action();
-
